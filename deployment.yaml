@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wrong-registry-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wrong-registry
+  template:
+    metadata:
+      labels:
+        app: wrong-registry
+    spec:
+      containers:
+      - name: faulty-container
+        image: wrongregistry/nginx
+        ports:
+        - containerPort: 80
