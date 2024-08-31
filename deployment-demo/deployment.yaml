@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: wrong-registry
-        image: bitnami/nginx
+        image: wrong-registry/nginx
         ports:
         - containerPort: 80
