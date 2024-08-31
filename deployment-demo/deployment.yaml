@@ -14,7 +14,7 @@ spec:
         app: wrong-registry
     spec:
       containers:
-      - name: faulty-container
+      - name: wrong-registry
         image: wrongregistry/nginx
         ports:
         - containerPort: 80
